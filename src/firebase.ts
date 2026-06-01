@@ -195,7 +195,6 @@ export const DEFAULT_SHIPPING_PRICES: ShippingPrice[] = [
   { governorate: 'البحر الأحمر', price: 75 },
   { governorate: 'مطروح', price: 70 },
   { governorate: 'الوادي الجديد', price: 80 },
-  { governorate: 'شمال سيناء', price: 75 },
   { governorate: 'جنوب سيناء', price: 80 },
 ];
 
