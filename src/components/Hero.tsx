@@ -106,12 +106,12 @@ export default function Hero() {
 
       </div>
 
-      <div className="animate-on-scroll opacity-0 translate-x-6 transition-all duration-1000 delay-300 relative w-full aspect-[4/3] md:aspect-auto md:h-[500px] rounded-2xl overflow-hidden shadow-2xl shadow-[#001256]/15 group bg-white">
+      <div className="animate-on-scroll opacity-0 translate-x-6 transition-all duration-1000 delay-300 relative w-full aspect-[4/5] sm:aspect-square md:aspect-auto md:h-[500px] rounded-2xl overflow-hidden shadow-2xl shadow-[#001256]/15 group bg-[#f8f7f6]">
         {heroImages.map((img, i) => (
           <img
             key={i}
             alt={`صاعق الناموس الكهربائي الذكي - صورة ${i + 1}`}
-            className="absolute inset-0 w-full h-full object-contain md:object-cover transition-all duration-1000 ease-in-out group-hover:scale-105"
+            className="absolute inset-0 w-full h-full object-cover transition-all duration-1000 ease-in-out group-hover:scale-105"
             style={{
               opacity: i === currentIndex ? 1 : 0,
               zIndex: i === currentIndex ? 1 : 0
