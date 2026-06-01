@@ -474,8 +474,10 @@ export default function DashboardPage() {
                         </p>
                       </div>
                       <div>
-                        <p className="text-[#767681] text-[12px]">المحافظة</p>
-                        <p className="text-[#001256] font-semibold text-[14px]">{order.governorate}</p>
+                        <p className="text-[#767681] text-[12px]">المحافظة / المدينة</p>
+                        <p className="text-[#001256] font-semibold text-[14px]">
+                          {order.governorate} {order.city ? `- ${order.city}` : ''}
+                        </p>
                       </div>
                       <div>
                         <p className="text-[#767681] text-[12px]">المجموع</p>

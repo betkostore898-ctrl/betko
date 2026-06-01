@@ -37,6 +37,12 @@ export default function OrderForm() {
     }
   }, []);
 
+  useEffect(() => {
+    if (orderCode) {
+      document.getElementById('order-form')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }, [orderCode]);
+
   const selectedShipping = shippingPrices.find((sp) => sp.governorate === governorate);
   const shippingCost = selectedShipping?.price || 0;
   const productTotal = productSettings.price * qty;
@@ -72,6 +78,8 @@ export default function OrderForm() {
       setOrderCode(code);
       localStorage.setItem('last_order_code', code);
       localStorage.setItem('last_order_time', Date.now().toString());
+      localStorage.setItem('last_order_shipping', shippingCost.toString());
+      localStorage.setItem('last_order_total', grandTotal.toString());
     } catch (error) {
       console.error('Failed to submit order:', error);
       alert('حدث خطأ في تسجيل الطلب. حاول مرة أخرى.');
@@ -130,10 +138,10 @@ export default function OrderForm() {
 
             <div className="bg-[#FFC641]/10 rounded-xl p-4 mb-6 border border-[#FFC641]/30">
               <p className="text-[#795900] font-semibold text-[15px]">
-                المجموع الكلي: <span className="text-xl">{grandTotal} ج.م</span>
+                المجموع الكلي: <span className="text-xl">{localStorage.getItem('last_order_total') || grandTotal} ج.م</span>
               </p>
               <p className="text-[#795900] text-sm mt-1">
-                (المنتج: {productTotal} ج.م + الشحن: {shippingCost} ج.م)
+                (المنتج: {productTotal} ج.م + الشحن: {localStorage.getItem('last_order_shipping') || shippingCost} ج.م)
               </p>
             </div>
 

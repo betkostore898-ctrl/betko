@@ -104,20 +104,14 @@ export default function Hero() {
           )}
         </div>
 
-        <a
-          href="#order-form"
-          className="animate-on-scroll opacity-0 translate-y-6 transition-all duration-700 delay-500 inline-block bg-gradient-to-l from-[#001256] to-[#1b2a6b] text-white font-bold text-lg px-8 py-4 rounded-xl text-center hover:shadow-xl hover:shadow-[#001256]/30 active:scale-95 transition-all w-full md:w-auto no-underline"
-        >
-          اطلب الآن واستلم في باب بيتك 🚪
-        </a>
       </div>
 
-      <div className="animate-on-scroll opacity-0 translate-x-6 transition-all duration-1000 delay-300 relative w-full h-[350px] md:h-[500px] rounded-2xl overflow-hidden shadow-2xl shadow-[#001256]/15 group">
+      <div className="animate-on-scroll opacity-0 translate-x-6 transition-all duration-1000 delay-300 relative w-full aspect-[4/3] md:aspect-auto md:h-[500px] rounded-2xl overflow-hidden shadow-2xl shadow-[#001256]/15 group bg-white">
         {heroImages.map((img, i) => (
           <img
             key={i}
             alt={`صاعق الناموس الكهربائي الذكي - صورة ${i + 1}`}
-            className="absolute inset-0 w-full h-full object-cover transition-all duration-1000 ease-in-out group-hover:scale-105"
+            className="absolute inset-0 w-full h-full object-contain md:object-cover transition-all duration-1000 ease-in-out group-hover:scale-105"
             style={{
               opacity: i === currentIndex ? 1 : 0,
               zIndex: i === currentIndex ? 1 : 0
@@ -153,6 +147,15 @@ export default function Hero() {
             <p className="text-[#767681] text-xs">في ثواني معدودة</p>
           </div>
         </div>
+      </div>
+
+      <div className="col-span-1 md:col-span-2 flex justify-center mt-2 md:mt-6">
+        <a
+          href="#order-form"
+          className="animate-on-scroll opacity-0 translate-y-6 transition-all duration-700 delay-500 inline-block bg-gradient-to-l from-[#001256] to-[#1b2a6b] text-white font-bold text-lg px-8 py-4 rounded-xl text-center hover:shadow-xl hover:shadow-[#001256]/30 active:scale-95 transition-all w-full md:w-auto min-w-[300px] no-underline"
+        >
+          اطلب الآن واستلم في باب بيتك 🚪
+        </a>
       </div>
     </section>
   );
