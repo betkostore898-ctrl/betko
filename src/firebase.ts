@@ -292,4 +292,4 @@ export async function updateProductSettings(settings: ProductSettings): Promise<
   }
 }
 
-export { db, auth };
+export { app, db, auth };
