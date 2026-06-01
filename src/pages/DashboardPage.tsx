@@ -462,7 +462,7 @@ export default function DashboardPage() {
                       </div>
                     </div>
 
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3">
                       <div>
                         <p className="text-[#767681] text-[12px]">الاسم</p>
                         <p className="text-[#001256] font-semibold text-[14px]">{order.fullName}</p>
@@ -484,7 +484,7 @@ export default function DashboardPage() {
                     </div>
 
                     <div className="mt-3 pt-3 border-t border-[#001256]/5">
-                      <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+                      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3">
                         <div>
                           <p className="text-[#767681] text-[12px]">العنوان</p>
                           <p className="text-[#454650] text-[13px]">{order.address}</p>
